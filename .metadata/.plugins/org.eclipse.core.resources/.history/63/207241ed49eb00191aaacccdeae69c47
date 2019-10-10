@@ -1,0 +1,17 @@
+package tp;
+
+public class Racine {
+
+	static double racineCarree(double r, double epsilon) {
+		assert r>=0 : "*** Précondition non vérifiée : r >= 0";
+		assert epsilon >0 : "*** Précondition non vérifiée : epsilon > 0";
+		double racine;
+		double ecart;
+		do {
+			racine = (racine + r/racine) / 2;
+			ecart = (racine * racine) - r;
+		} while (Math.abs(ecart) > epsilon);
+		return racine;
+	}	
+	
+}

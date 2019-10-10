@@ -1,0 +1,9 @@
+package tp;
+
+public class Racine {
+
+	static double racineCarree(double r, double epsilon) {
+		
+	}
+	
+}
