@@ -1,0 +1,8 @@
+package tp;
+
+public class TestRacine {
+		public static void main(String [] args)
+	  {
+		racineCarree()
+	  }
+}
