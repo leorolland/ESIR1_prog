@@ -21,7 +21,7 @@ public class TestUnitaireLecture
 
   public int AppelAlgo(int [] t, Scanner s)
   {
-    return tp1.Tableau.lireTableau(t, -1, s);
+    return tp1.TriDicho.lireTableau(t, -1, s);
   }
 
   @Test
