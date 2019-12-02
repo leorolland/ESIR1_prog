@@ -4,4 +4,16 @@
 <fullyQualifiedTypeName name="java.util.Arrays"/>
 <fullyQualifiedTypeName name="tp1.Tri"/>
 <fullyQualifiedTypeName name="tp1.TriDicho"/>
+<fullyQualifiedTypeName name="types.Array"/>
+<fullyQualifiedTypeName name="types.Tableau"/>
+<fullyQualifiedTypeName name="test.ATU_NombresPremiers"/>
+<fullyQualifiedTypeName name="tableau.Block"/>
+<fullyQualifiedTypeName name="java.util.Random"/>
+<fullyQualifiedTypeName name="tableau.Tableau2x"/>
+<fullyQualifiedTypeName name="tableau.TableauBlock"/>
+<fullyQualifiedTypeName name="java.util.Scanner"/>
+<fullyQualifiedTypeName name="java.io.BufferedReader"/>
+<fullyQualifiedTypeName name="java.io.FileReader"/>
+<fullyQualifiedTypeName name="outilsArbre.OutilsArbre"/>
+<fullyQualifiedTypeName name="outilsTris.OutilsTris"/>
 </qualifiedTypeNameHistroy>
