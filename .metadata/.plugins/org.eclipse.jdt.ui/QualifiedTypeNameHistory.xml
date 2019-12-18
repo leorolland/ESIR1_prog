@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
-<fullyQualifiedTypeName name="java.util.Arrays"/>
 <fullyQualifiedTypeName name="tp1.Tri"/>
 <fullyQualifiedTypeName name="tp1.TriDicho"/>
 <fullyQualifiedTypeName name="types.Array"/>
@@ -16,4 +15,12 @@
 <fullyQualifiedTypeName name="java.io.FileReader"/>
 <fullyQualifiedTypeName name="outilsArbre.OutilsArbre"/>
 <fullyQualifiedTypeName name="outilsTris.OutilsTris"/>
+<fullyQualifiedTypeName name="java.util.stream.Collectors"/>
+<fullyQualifiedTypeName name="java.util.LinkedList"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="types.ABinHuffman"/>
+<fullyQualifiedTypeName name="types.Couple"/>
+<fullyQualifiedTypeName name="java.util.Arrays"/>
+<fullyQualifiedTypeName name="java.util.ListIterator"/>
+<fullyQualifiedTypeName name="outilsHuffman.OutilsHuffman"/>
 </qualifiedTypeNameHistroy>

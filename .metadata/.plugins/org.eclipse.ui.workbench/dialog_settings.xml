@@ -26,6 +26,8 @@
 		<item key="WizardZipFileResourceExportPage1.STORE_CREATE_STRUCTURE_ID" value="true"/>
 		<item key="WizardZipFileResourceExportPage1.STORE_COMPRESS_CONTENTS_ID" value="true"/>
 		<list key="WizardZipFileResourceExportPage1.STORE_DESTINATION_NAMES_ID">
+			<item value="/private/student/9/09/18002209/Bureau/rolland_mercier_tp4.zip"/>
+			<item value="/private/student/9/09/18002209/Bureau/rolland_mercier_tp3.zip"/>
 			<item value="/private/student/9/09/18002209/Bureau/rolland_mercier_tp2.zip"/>
 			<item value="/private/student/9/09/18002209/Bureau/rolland_tp1.zip"/>
 		</list>

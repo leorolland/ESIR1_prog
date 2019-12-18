@@ -1,9 +1,5 @@
 package tp4;
 
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
 import java.util.Scanner;
 
 import outilsTris.OutilsTris;
@@ -16,18 +12,26 @@ public class Main {
 		// Saisie d'un fichier
 		// SAISIR : /private/student/9/09/18002209/prog/tp4/src/donnees/NOM
 		System.out.println("Entrez un nom de fichier : ");
-//		String nomFichier = sc.nextLine();
-		String nomFichier = "/private/student/9/09/18002209/prog/tp4/src/donnees/donnees_00097";
+		String nomFichier = sc.nextLine();
+//		String nomFichier = "/private/student/9/09/18002209/prog/tp4/src/donnees/donnees_50000_seq";
 		// Lecture du fichier
 		int[] tab = OutilsTris.lireTableau(nomFichier);
 		// Tri du tableau de nombres
-		TriTas.trier(tab, tab.length);
+		TriRapide.trier(tab, tab.length);
 		// Test du tri
 		System.out.println(estTrie(tab));
 		afficherTableau(tab, tab.length-1);
 		// Enregistrement du tableau
 		OutilsTris.enregistrerTableau(tab, tab.length, "output.txt");
 		
+		
+		// Tri rapide
+		System.out.println("\nTri dicho :");
+		int[] tab2 = OutilsTris.lireTableau(nomFichier);
+		TriRapide.trier(tab2, tab2.length);
+//		afficherTableau(tab2, tab.length-1);
+		System.out.println(estTrie(tab));
+		System.out.println(estTrie(tab2));
  	}
 
 	public static boolean estTrie(int[] tab) {

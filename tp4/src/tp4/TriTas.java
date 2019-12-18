@@ -11,31 +11,39 @@ public class TriTas {
 	 * @post les p+1 premiers éléments du tableau tnb forment un tas
 	 */
 	static void ajouterTas(int[] tnb, int p) {
-		int ipere;
-		if (p % 2 == 0 && p > 0) {
-			ipere = (p / 2) - 1;
-		} else {
-			ipere = p / 2;
-		}
-		int passage = 0;
-		int tmp;
-		while (p > 0 && passage < 2 && tnb[ipere] < tnb[p]) {
-			tmp = tnb[ipere];
-			tnb[ipere] = tnb[p];
+//		int ipere;
+//		if (p % 2 == 0 && p > 0) {
+//			ipere = (p / 2) - 1;
+//		} else {
+//			ipere = p / 2;
+//		}
+//		int passage = 0;
+//		int tmp;
+//		while (p > 0 && passage < 2 && tnb[ipere] < tnb[p]) {
+//			tmp = tnb[ipere];
+//			tnb[ipere] = tnb[p];
+//			tnb[p] = tmp;
+//			if (ipere == 1) {
+//				p = ipere;
+//				ipere = 0;
+//				passage++;
+//			} else {
+//				if ((ipere % 2) == 0) {
+//					p = ipere;
+//					ipere = (p / 2) - 1;
+//				} else {
+//					p = ipere;
+//					ipere = p / 2;
+//				}
+//			}
+//		}
+		int iPere = (int)((p-1)/2);
+		while(tnb[iPere] < tnb[p]) {
+			int tmp = tnb[iPere];
+			tnb[iPere] = tnb[p];
 			tnb[p] = tmp;
-			if (ipere == 1) {
-				p = ipere;
-				ipere = 0;
-				passage++;
-			} else {
-				if ((ipere % 2) == 0) {
-					p = ipere;
-					ipere = (p / 2) - 1;
-				} else {
-					p = ipere;
-					ipere = p / 2;
-				}
-			}
+			p = iPere;
+			iPere = (int)((p-1)/2);
 		}
 	}
 
@@ -73,11 +81,16 @@ public class TriTas {
 			} else {
 				fin = true;
 			}
-			ifilsgauche = i * 2 + 1;
-			ifilsdroit = i * 2 + 2;
+			ifilsgauche = getindicefilsG(i);
+			ifilsdroit = getindicefilsD(i);
 		}
 	}
 
+	/**
+	 * Replace le fils à la bonne place
+	 * @param tnb tableau d'entiers représentant l'arbre
+	 * @param i indice de l'élément consideré
+	 */
 	public static void replacefils(int[] tnb, int i) {
 		int pere =  getindicepere(tnb, i);
 		while(tnb[i] > tnb[pere]) {
@@ -88,21 +101,30 @@ public class TriTas {
 		}
 	}
 	
-	public static int getindicefilsD(int[] tnb, int i) {
+	/**
+	 * Retourne l'indice du fils droit de l'élément à l'index i
+	 * @param i indice de l'élément consideré
+	 * @return l'indice du fils droit de l'élément
+	 */
+	public static int getindicefilsD(int i) {
 		return i * 2 + 2;
 	}
-
-	public static int getindicefilsG(int[] tnb, int i) {
+	/**
+	 * Retourne l'indice du fils gauche de l'élément à l'index i
+	 * @param i indice de l'élément consideré
+	 * @return l'indice du fils gauche de l'élément
+	 */
+	public static int getindicefilsG(int i) {
 		return i * 2 + 1;
 	}
-	
+	/**
+	 * Retourne l'indice du père de l'élément à l'index i
+	 * @param tnb tableau d'entiers représentant l'arbre
+	 * @param i indice de l'élément consideré
+	 * @return l'indice du père de l'élément à l'index i
+	 */
 	public static int getindicepere(int[] tnb, int i) {
-		int ipere;
-		if (i % 2 == 0 && i > 0) {
-			return (i / 2) - 1;
-		} else {
-			return i / 2;
-		}
+		return (i-1)/2;
 	}
 
 	/**

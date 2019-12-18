@@ -1,4 +1,4 @@
-package tp4;
+package tp5;
 
 public class TriRapide {
 
@@ -26,26 +26,16 @@ public class TriRapide {
 		// On place le pivot à bsup
 		T[binfOrigin] = T[bsup];
 		T[bsup] = valPivot;
-		System.out.println("Le pivot est " + valPivot);
 		return bsup;
 	}
-	/**
-	 * Trie de manière récursive le tableau entre les bornes données
-	 * @param T
-	 * @param binf Bornes inférieure
-	 * @param bsup Bornes supérieure
-	 */
+	
 	static void triRapide(int [] T, int binf, int bsup) {
 		if (binf>=bsup) return;
 		int pivot = partager(T, binf, bsup);
 		triRapide(T, binf, pivot-1);
 		triRapide(T, pivot+1, bsup);
 	}
-	/**
-	 * Trie le tableau T jusqu'à l'indice nb de manière croissante
-	 * @param T
-	 * @param nb
-	 */
+	
 	public static void trier(int [] T, int nb) {
 		triRapide(T, 0, nb-1);
 	}
