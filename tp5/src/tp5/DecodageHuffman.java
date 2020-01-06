@@ -19,7 +19,7 @@ public class DecodageHuffman
     //------------------------------------------------------------------------
     // 0. Saisir le nom du fichier à décoder (À FAIRE)
     //------------------------------------------------------------------------
-    String nomFichier = "ivre.txt.code";
+    String nomFichier = "poemes.txt.code";
 
     //------------------------------------------------------------------------
     // 1. Lire et construire la table de fréquences (DONNÉ)
@@ -30,8 +30,8 @@ public class DecodageHuffman
     // 2. Construire l'arbre de Huffman (DONNÉ)
     //------------------------------------------------------------------------
     ABinHuffman arbreHuffman =
-      OutilsHuffman.construireArbreHuffman(tableFrequences);
-//    		CodageHuffman.construireArbreHuffman(tableFrequences);
+    //  OutilsHuffman.construireArbreHuffman(tableFrequences);
+ 	  CodageHuffman.construireArbreHuffman(tableFrequences);
 
     //------------------------------------------------------------------------
     // 2.1 afficher l'arbre de Huffman (À FAIRE)
@@ -54,6 +54,15 @@ public class DecodageHuffman
     //------------------------------------------------------------------------
     System.out.println("texte décodé:\n\n" + texteDecode);
     OutilsHuffman.enregistrerTexte(texteDecode, nomFichier + ".decode");
+  }
+  
+  static void enregistrerTexte(StringBuilder texte, String nomFichierDecode){
+	  	  /* 
+	  	   * FileOutputStream -> (output stream) writing data to file or a FileDescriptor
+	  	   * OutputStreamWriter -> writing streams of raw bytes such as image data
+	  	   * BufferedWriter -> writes text to a character output steam, buffering characters so sas to provide for the efficient
+	  	   * writing of single characters, arrays and strings
+	  	   * */
   }
 
   /**

@@ -17,11 +17,10 @@ import outilsHuffman.OutilsHuffman;
 
 public class CodageHuffman {
 	public static void main(String[] args) {
-		System.out.println("==============" + ((int)'é'));
 		// ------------------------------------------------------------------------
 		// 0. Saisir le nom du fichier à coder (À FAIRE)
 		// ------------------------------------------------------------------------
-		String nomFichier = "ivre.txt";
+		String nomFichier = "poemes.txt";
 
 		// ------------------------------------------------------------------------
 		// 1. Lire le texte (DONNÉ)
@@ -157,7 +156,7 @@ public class CodageHuffman {
 				// Suppression de l'élément du tableau tableFrequences
 				tableFrequences[indiceMax] = 0;
 			}
-			System.out.println(max);
+			//System.out.println(max);
 		} while(max != 0);
 		return arbresInitiaux;
 	}
