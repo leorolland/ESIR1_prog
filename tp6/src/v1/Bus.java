@@ -35,7 +35,16 @@ public class Bus implements IVehicule {
 	}
 	
 	public String toString() {
-		return "Bus - " + passagers + " passagers - " + getLongueur() + "m " + calculerTarif() + "€"; 
+		return "Bus - " + passagers + " passagers - " + getLongueur() + "m " + calculerTarif() + "€ immat: " + getImmatriculation(); 
 	}
+	
+	public Bus clone() {
+		return new Bus(passagers, immatriculation, longueur);
+	}
+	
+	@Override
+	public int compareTo(IVehicule arg0) {
+		return this.getLongueur() - arg0.getLongueur();
+	} 
 
 }

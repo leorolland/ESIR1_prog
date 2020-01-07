@@ -36,7 +36,18 @@ public class Auto implements IVehicule {
 	}
 	
 	public String toString() {
-		return "Auto - " + passagers + " passagers - " + getLongueur() + "m " + calculerTarif() + "€"; 
+		return "Auto - " + passagers + " passagers - " + getLongueur() + "m " + calculerTarif() + "€ immat: " + getImmatriculation(); 
 	}
+	
+	@Override
+	public Auto clone() {
+		Auto a = new Auto(passagers, immatriculation, isToutTerrain);
+		return a;
+	}
+
+	@Override
+	public int compareTo(IVehicule arg0) {
+		return this.getLongueur() - arg0.getLongueur();
+	} 
 
 }

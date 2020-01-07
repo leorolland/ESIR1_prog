@@ -1,4 +1,4 @@
-package v1;
+package v3;
 
 public interface IVehicule extends Cloneable, Comparable<IVehicule> {
 
@@ -6,6 +6,5 @@ public interface IVehicule extends Cloneable, Comparable<IVehicule> {
 	public int getPassagers();
 	public String getImmatriculation();
 	public String toString();
-	public float calculerTarif();
 	
 }
