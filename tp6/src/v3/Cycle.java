@@ -10,14 +10,9 @@ public class Cycle extends Vehicule {
 	public Cycle() {
 		super(LONGUEUR, PASSAGERS, "");
 	}
-
-	@Override
-	public float calculerTarif() {
-		return 20 + TARIF_PASSAGER * PASSAGERS;
-	}
 	
 	public String toString() {
-		return "Auto - " + PASSAGERS + " passagers - " + getLongueur() + "m " + calculerTarif() + "€ immat: " + getImmatriculation(); 
+		return "Auto - " + PASSAGERS + " passagers - " + getLongueur() + "m immat : " + getImmatriculation(); 
 	}
 	
 	@Override

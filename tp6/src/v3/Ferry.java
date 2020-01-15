@@ -5,6 +5,7 @@ import java.util.Comparator;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Map;
 
 public class Ferry {
 	
@@ -14,14 +15,16 @@ public class Ferry {
 	private int used;
 	private int usedPassa;
 	private float tarifCumules;
+	private Map<String, Tarif> tarif;
 	
-	public Ferry(int kappa, int passa) {
+	public Ferry(int kappa, int passa, Map<String, Tarif> tarif) {
 		capa = kappa;
 		capaPassa = passa;
 		vehicules = new LinkedList<IVehicule>();
 		used = 0;
 		usedPassa = 0;
 		tarifCumules = 0F;
+		this.tarif = tarif;
 	}
 	
 	public boolean ajouter(IVehicule v) {
@@ -29,7 +32,7 @@ public class Ferry {
 			used += v.getLongueur();
 			usedPassa += v.getPassagers();
 			vehicules.add(v);
-			tarifCumules += v.calculerTarif();
+			tarifCumules += tarif.get(v.getImmatriculation()).calculerTarif(v);
 			return true;
 		}
 		return false;
@@ -44,7 +47,7 @@ public class Ferry {
 	}
 	
 	public void trierParTarif(boolean inverse) {
-		Collections.sort(vehicules, new ComparateurTarif(inverse));
+		Collections.sort(vehicules, new ComparateurTarif(inverse, tarif));
 	}
 	
 	public void trierParLongueur() {

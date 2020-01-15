@@ -23,6 +23,4 @@ public abstract class Vehicule implements IVehicule {
 		return immatriculation;
 	}
 
-	public abstract float calculerTarif();
-
 }

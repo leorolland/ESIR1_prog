@@ -1,17 +1,23 @@
 package v3;
 
 import java.util.Comparator;
+import java.util.Map;
 
 public class ComparateurTarif extends AComparator {
-		
-	public ComparateurTarif(boolean inverse) {
+	
+	private Map<String, Tarif> tarif;
+	
+	public ComparateurTarif(boolean inverse, Map<String, Tarif> tarif) {
 		super(inverse);
+		this.tarif = tarif;
 	}
 
 	@Override
 	int doCompare(IVehicule a, IVehicule b) {
-		if (!reversed) return (int) (a.calculerTarif() - b.calculerTarif());
-		else return (int) (b.calculerTarif() - a.calculerTarif());
+		double tarifA = tarif.get(a.getImmatriculation()).calculerTarif(a);
+		double tarifB = tarif.get(b.getImmatriculation()).calculerTarif(b);
+		if (!reversed) return (int) (tarifA - tarifB);
+		else return (int) (tarifB - tarifA);
 	}
 
 }

@@ -1,7 +1,7 @@
 package v3;
 
 public class Auto extends Vehicule {
-	
+
 	static final int LONGUEUR = 2;
 	static final int TARIF_PASSAGER = 15;
 	
@@ -11,15 +11,9 @@ public class Auto extends Vehicule {
 		super(LONGUEUR, pers, immat);
 		isToutTerrain = toutTerrain;
 	}
-
-
-	@Override
-	public float calculerTarif() {
-		return (isToutTerrain?350:100) + TARIF_PASSAGER * getPassagers();
-	}
 	
 	public String toString() {
-		return "Auto - " + getPassagers() + " passagers - " + getLongueur() + "m " + calculerTarif() + "€ immat: " + getImmatriculation(); 
+		return "Auto - " + getPassagers() + " passagers - " + getLongueur() + "m, immat : " + getImmatriculation(); 
 	}
 	
 	@Override
@@ -32,6 +26,13 @@ public class Auto extends Vehicule {
 		return this.getLongueur() - arg0.getLongueur();
 	}
 
+	public boolean isToutTerrain() {
+		return isToutTerrain;
+	}
 
+
+	public void setToutTerrain(boolean isToutTerrain) {
+		this.isToutTerrain = isToutTerrain;
+	}
 
 }

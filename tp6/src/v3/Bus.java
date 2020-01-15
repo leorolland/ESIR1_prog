@@ -8,14 +8,9 @@ public class Bus extends Vehicule {
 	public Bus(int pers, String immat, int longueur) {
 		super(longueur, pers, immat);
 	}
-
-	@Override
-	public float calculerTarif() {
-		return 200 + 50 * getLongueur() + TARIF_PASSAGER * getPassagers();
-	}
 	
 	public String toString() {
-		return "Bus - " + getPassagers() + " passagers - " + getLongueur() + "m " + calculerTarif() + "€ immat: " + getImmatriculation(); 
+		return "Bus - " + getPassagers() + " passagers - " + getLongueur() + "m, immat: " + getImmatriculation(); 
 	}
 	
 	public Bus clone() {
